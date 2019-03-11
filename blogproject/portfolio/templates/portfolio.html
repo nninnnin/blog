@@ -1,0 +1,26 @@
+<!--static file 사용 선언-->
+{% load staticfiles %}
+
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="{% static 'sct.jpg' %}" alt="Card image cap" height="150"><!--static파일 사용-->
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
+{% for portfolio in portfolios.all %}
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="{{portfolio.image.url}}" alt="Card image cap" height="150"><!--static파일 사용-->
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">{{portfolio.description}}</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+{% endfor %}

@@ -1,0 +1,19 @@
+<h1>! ! ! SIGN UP ! ! !</h1>
+
+<form method="POST" action="{% url 'signup' %}">
+    {% csrf_token %}<!--보안을 위한 난수발생기. csrf공격 방어 cross site request forsery?-->
+    Username:
+    <br>
+    <input name="username" type="text" value="">
+    <br>
+    PASSWORD(잘써):
+    <br>
+    <input name="pwd" type="password">
+    <br>
+    PASSWORD AGAIN:
+    <br>
+    <input name="pwdConfirm" type="password">
+    <br>
+    <input value="제출하기" type="submit">
+    <br>
+</form>
