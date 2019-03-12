@@ -33,7 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
-    'django.contrib.sites', #allauth
+    'django.contrib.sites',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
@@ -42,16 +42,6 @@ INSTALLED_APPS = [
     'portfolio.apps.PortfolioConfig',
     'accounts.apps.AccountsConfig',
     'thumbnail.apps.ThumbnailConfig',
-
-
-    # allauth
-    'allauth',
-    'allauth.account',
-    'allauth.socialaccount',
-
-    # provider 구글 페이스북 카톡 깃헙
-    'allauth.socialaccount.provider.google',
-
 ]
 
 MIDDLEWARE = [
@@ -134,12 +124,12 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = [ #static 파일들이 현재 어디에 있는지를 쓰는 곳
+STATICFILES_DIRS = [  # static 파일들이 현재 어디에 있는지를 쓰는 곳
     os.path.join(BASE_DIR, 'portfolio', 'static')
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-#static 파일들이 어디로 모일 것인지 (어디로 모을 것인지)를 쓰는 곳
+# static 파일들이 어디로 모일 것인지 (어디로 모을 것인지)를 쓰는 곳
 
 # static file들이 1.어디에 있는지를 파악 -> 2. 모을 장소를 확인. 3. 모은다(명령어 python manage.py collectstatic)
 
@@ -149,10 +139,10 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 
-#allauth!!
+# allauth!!
 
 AUTHENTICATION_BACKENDS = (
-    #Needed to login by username in Django admin, regardless of 'allauth'
+    # Needed to login by username in Django admin, regardless of 'allauth'
     'django.contrib.auth.backends.ModelBackend',
 
     # 'allauth' specific authentication methods, such as login by e-mail
@@ -163,4 +153,4 @@ SITE_ID = 1
 
 lOGIN_REDIRECT_URL = '/'
 
-#기타설정들
+# 기타설정들

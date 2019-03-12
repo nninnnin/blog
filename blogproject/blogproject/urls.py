@@ -15,20 +15,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from . import blogapp
-from . import portfolio
+import blogapp.views
+import portfolio.views
 
-from django.conf import settings #for static
-from django.conf.urls.static import static #for static
+from django.conf import settings  # for static
+from django.conf.urls.static import static  # for static
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',blogapp.views.home, name="home"),
-    path('blog/',include('blogapp.urls')),
-    path('portfolio',portfolio.views.portfolio, name="portfolio"),
-    path('accounts/',include('accounts.urls')),
-    path('accounts/',include('allauth.urls')),
-] 
+    path('', blogapp.views.home, name="home"),
+    path('blog/', include('blogapp.urls')),
+    path('portfolio', portfolio.views.portfolio, name="portfolio"),
+    path('accounts/', include('accounts.urls')),
+]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
