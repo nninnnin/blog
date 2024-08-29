@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import plugin from "tailwindcss/plugin";
 
 const config: Config = {
   content: [
@@ -9,12 +10,35 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-radial":
+          "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(function ({ addComponents }) {
+      addComponents({
+        ".heading": {
+          fontSize: "2em",
+        },
+        ".subheading": {
+          fontSize: "1.5em",
+          marginTop: "1em",
+        },
+        ".sectionHeading": {
+          fontSize: "1em",
+        },
+        ".section": {
+          padding: "1em",
+        },
+        ".list": {
+          listStyleType: "disc",
+          paddingLeft: "1.8em",
+        },
+      });
+    }),
+  ],
 };
 export default config;

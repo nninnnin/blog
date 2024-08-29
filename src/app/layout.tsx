@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import clsx from "clsx";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,8 +16,43 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
-    </html>
+    <RootLayout.Container>
+      {/* <RootLayout.Header>
+        저스틴 블로그
+      </RootLayout.Header> */}
+      {children}
+    </RootLayout.Container>
   );
 }
+
+RootLayout.Container = ({
+  children,
+}: {
+  children: React.ReactNode;
+}) => {
+  return (
+    <html lang="en">
+      <body className={inter.className}>
+        {children}
+      </body>
+    </html>
+  );
+};
+
+RootLayout.Header = ({
+  children,
+}: {
+  children: React.ReactNode;
+}) => {
+  return (
+    <header
+      className={clsx(
+        "fixed",
+        "top-[30px] left-[30px] sm:top-[100px] sm:left-[100px]",
+        "bg-slate-100 p-3"
+      )}
+    >
+      <h1>{children}</h1>
+    </header>
+  );
+};
