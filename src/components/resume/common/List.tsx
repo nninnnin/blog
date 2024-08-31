@@ -5,11 +5,7 @@ const List = ({
 }: {
   children: React.ReactNode;
 }) => {
-  return (
-    <ul className="list space-y-[0.5em]">
-      {children}
-    </ul>
-  );
+  return <ul className="list">{children}</ul>;
 };
 
 List.Item = ({
