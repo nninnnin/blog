@@ -22,9 +22,11 @@ const config: Config = {
       addComponents({
         ".heading": {
           fontSize: "2em",
+          fontWeight: "900",
         },
         ".subheading": {
           fontSize: "1.5em",
+          fontWeight: "bold",
           marginTop: "1em",
         },
         ".sectionHeading": {

@@ -5,7 +5,19 @@ const List = ({
 }: {
   children: React.ReactNode;
 }) => {
-  return <ul className="list">{children}</ul>;
+  return (
+    <ul className="list space-y-[0.5em]">
+      {children}
+    </ul>
+  );
+};
+
+List.Item = ({
+  children,
+}: {
+  children: React.ReactNode;
+}) => {
+  return <li>{children}</li>;
 };
 
 export default List;
