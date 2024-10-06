@@ -9,7 +9,7 @@ const Topic = ({
 }) => {
   return (
     <div>
-      <h3 className="mb-[0.5em] font-semibold">
+      <h3 className="mb-[0.5em] font-semibold text-blue-500">
         {header}
       </h3>
       {children}

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import clsx from "clsx";
+import AppHeader from "@/components/layout/AppHeader";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,43 +17,33 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <RootLayout.Container>
-      {/* <RootLayout.Header>
-        저스틴 블로그
-      </RootLayout.Header> */}
-      {children}
-    </RootLayout.Container>
-  );
-}
-
-RootLayout.Container = ({
-  children,
-}: {
-  children: React.ReactNode;
-}) => {
-  return (
     <html lang="en">
-      <body className={inter.className}>
-        {children}
+      <body
+        className={clsx(
+          inter.className,
+          "flex flex-col",
+          "overscroll-none",
+          "bg-slate-200"
+        )}
+      >
+        <AppHeader />
+
+        <RootLayout.AppContainer>
+          {children}
+        </RootLayout.AppContainer>
       </body>
     </html>
   );
-};
+}
 
-RootLayout.Header = ({
+RootLayout.AppContainer = ({
   children,
 }: {
   children: React.ReactNode;
 }) => {
   return (
-    <header
-      className={clsx(
-        "fixed",
-        "top-[30px] left-[30px] sm:top-[100px] sm:left-[100px]",
-        "bg-slate-100 p-3"
-      )}
-    >
-      <h1>{children}</h1>
-    </header>
+    <div className="h-[90dvh] mt-[10dvh] w-[50vw] min-w-[700px] mx-auto text-[20px]">
+      {children}
+    </div>
   );
 };

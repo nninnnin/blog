@@ -7,7 +7,7 @@ import Subsection from "@/components/resume/common/Subsection";
 const VanillaCoding = () => {
   return (
     <Subsection header="바닐라코딩 (2021 - 2022)">
-      <h2 className="border-b-[1px] text-[1.2em] font-semibold">
+      <h2 className="border-b-[1px] text-[1.2em] font-semibold text-blue-500">
         멘토링
       </h2>
 
@@ -25,11 +25,7 @@ const VanillaCoding = () => {
         </List>
       </Topic>
 
-      <div>
-        <h3 className="mb-[0.5em] font-semibold">
-          수강생 과제물 코드리뷰
-        </h3>
-
+      <Topic header="수강생 과제물 코드리뷰">
         <List>
           <List.Item>
             주 1회 깃랩 PR을 통해 제출된 수강생
@@ -42,14 +38,13 @@ const VanillaCoding = () => {
             기본적이지만 중요한 내용을 코멘트
           </List.Item>
         </List>
-      </div>
-      <h2 className="border-b-[1px] text-[1.2em] font-semibold">
+      </Topic>
+
+      <h2 className="border-b-[1px] text-[1.2em] font-semibold text-blue-500">
         개발
       </h2>
-      <div>
-        <h3 className="mb-[0.5em] font-semibold">
-          코드리뷰 페어 배정 자동화 툴 개발
-        </h3>
+
+      <Topic header="코드리뷰 페어 배정 자동화 툴 개발">
         <List>
           <List.Item>
             수강생들의 코드리뷰 페어를 알고리즘에
@@ -69,11 +64,9 @@ const VanillaCoding = () => {
             2시간을 5분으로 단축
           </List.Item>
         </List>
-      </div>
-      <div>
-        <h3 className="mb-[0.5em] font-semibold">
-          바닐라코딩 웹 포털 개발
-        </h3>
+      </Topic>
+
+      <Topic header="바닐라코딩 웹 포털 개발">
         <List>
           <List.Item>
             코스 신청, 결제 및 코스 컨텐츠를
@@ -102,15 +95,13 @@ const VanillaCoding = () => {
             개발
           </List.Item>
         </List>
-      </div>
-      <div>
-        <h3 className="mb-[0.5em] font-semibold">
-          컴퓨팅 사고 게임 앱 Wordie 개발
-        </h3>
+      </Topic>
+
+      <Topic header="컴퓨팅 사고 게임 앱 Wordie 개발">
         <List>
           <List.Item>
             큐, 스택, 트리등의 개념을 단어 퍼즐을
-            풀며 익힐 수 있는 게임 어플리케이션
+            풀며 익힐 수 있는 게임 애플리케이션
           </List.Item>
 
           <List.Item>
@@ -121,8 +112,7 @@ const VanillaCoding = () => {
             안드로이드 플레이스토어에 배포
           </List.Item>
         </List>
-      </div>
-      <hr />
+      </Topic>
     </Subsection>
   );
 };

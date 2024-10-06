@@ -9,7 +9,9 @@ const Section = ({
 }) => {
   return (
     <div>
-      <h2 className="subheading">{header}</h2>
+      <h2 className="subheading text-blue-500">
+        {header}
+      </h2>
 
       <div className="section space-y-[1em]">
         {children}

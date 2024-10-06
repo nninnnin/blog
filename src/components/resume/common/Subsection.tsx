@@ -9,7 +9,7 @@ const Subsection = ({
 }) => {
   return (
     <div>
-      <h3 className="text-[1.2em] font-semibold">
+      <h3 className="text-[1.2em] font-semibold text-blue-500">
         {header}
       </h3>
 

@@ -9,10 +9,10 @@ import VanillaCoding from "@/components/resume/work/VanillaCoding";
 const Work = () => {
   return (
     <Section header="경력">
-      <Carrontins />
-      <VanillaCoding />
-      <Chopticks />
       <Rebel9 />
+      <Chopticks />
+      <VanillaCoding />
+      <Carrontins />
     </Section>
   );
 };
