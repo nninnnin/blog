@@ -3,7 +3,7 @@ import React from "react";
 
 const WorksPage = () => {
   return (
-    <PageContainer className="bg-sky-50">
+    <PageContainer>
       <ul>
         <ListItem
           title="피트 아우돌프 정원 탐색기"

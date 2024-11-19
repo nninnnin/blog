@@ -4,7 +4,7 @@ import React from "react";
 
 const AboutPage = () => {
   return (
-    <PageContainer className="bg-amber-50 py-[2em]">
+    <PageContainer>
       <img
         className={clsx(
           "mb-[1em] mx-auto",
@@ -12,8 +12,8 @@ const AboutPage = () => {
         )}
         src="/main.jpeg"
       />
-      Lorem ipsum dolor sit amet consectetur
-      adipisicing elit. Aliquid, accusamus.
+      이것은 아마도 내가 일본의 호텔에서 커피를
+      마시던 흔적이다.
     </PageContainer>
   );
 };

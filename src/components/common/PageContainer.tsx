@@ -11,8 +11,7 @@ const PageContainer = ({
   return (
     <div
       className={clsx(
-        "p-[2em] py-[1.2em] break-keep leading-[2em] h-full",
-        "!bg-slate-50",
+        "break-keep h-full",
         "overflow-y-scroll",
         className
       )}

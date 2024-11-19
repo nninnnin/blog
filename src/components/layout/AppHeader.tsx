@@ -3,32 +3,34 @@ import React from "react";
 
 const AppHeader = () => {
   return (
-    <div
-      className={clsx(
-        "fixed top-0 left-0",
-        "h-[10dvh] w-full bg-slate-100",
-        "flex items-center",
-        "text-[20px]",
-        "px-[2vw]",
-        "pb-[5px]"
-      )}
-    >
-      <a className="mr-[32vw]" href="/about">
-        <span className="">Lee Dong Gyu</span>
-      </a>
+    <>
+      <div className="fixed top-10 left-10 p-3 px-4 bg-white rounded-lg">
+        <a href="/about">
+          <span className="">이동규</span>
+        </a>
+      </div>
 
-      <ul className="flex space-x-[30px]">
-        <a href="/posts">
-          <li>Posts</li>
-        </a>
-        <a href="/works">
-          <li>Works</li>
-        </a>
-        <a href="/career">
-          <li>Career</li>
-        </a>
-      </ul>
-    </div>
+      <div
+        className={clsx(
+          "fixed top-[10%] right-[20%]",
+          "p-4 px-6",
+          "bg-slate-50",
+          "rounded-xl"
+        )}
+      >
+        <ul className="flex flex-col space-y-[1em]">
+          <a href="/posts">
+            <li>포스트</li>
+          </a>
+          <a href="/works">
+            <li>작업</li>
+          </a>
+          <a href="/career">
+            <li>이력</li>
+          </a>
+        </ul>
+      </div>
+    </>
   );
 };
 
