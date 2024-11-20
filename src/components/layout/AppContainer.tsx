@@ -16,6 +16,8 @@ const AppContainer = ({
   const isAboutPage = pathname.includes("about");
   const isPostsPage = pathname.includes("posts");
   const isWorksPage = pathname.includes("works");
+  const isCareerPage =
+    pathname.includes("career");
 
   return (
     <div
@@ -30,7 +32,9 @@ const AppContainer = ({
         isAboutPage &&
           "!bg-amber-300 !text-black",
         isPostsPage && "!bg-green-50 !text-black",
-        isWorksPage && "!bg-sky-50 !text-black"
+        isWorksPage && "!bg-sky-50 !text-black",
+        isCareerPage &&
+          "!bg-fuchsia-100 !text-black"
       )}
     >
       <Breadcrumb />

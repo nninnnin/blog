@@ -1,5 +1,7 @@
-import PageContainer from "@/components/common/PageContainer";
 import React from "react";
+
+import PageContainer from "@/components/common/PageContainer";
+import ListView from "@/components/common/ListView";
 
 const PostsPage = () => {
   const titles = [
@@ -14,9 +16,7 @@ const PostsPage = () => {
 
   return (
     <PageContainer>
-      <ul className="w-full h-full space-y-[6px]">
-        {items}
-      </ul>
+      <ListView>{items}</ListView>
     </PageContainer>
   );
 };
