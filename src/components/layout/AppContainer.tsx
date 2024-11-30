@@ -3,6 +3,7 @@
 import React from "react";
 import clsx from "clsx";
 import { usePathname } from "next/navigation";
+import { PATHNAME_MAPPER } from "@/constants";
 
 const AppContainer = ({
   children,
@@ -10,8 +11,6 @@ const AppContainer = ({
   children: React.ReactNode;
 }) => {
   const pathname = usePathname();
-
-  console.log(pathname);
 
   const isAboutPage = pathname.includes("about");
   const isPostsPage = pathname.includes("posts");
@@ -26,15 +25,17 @@ const AppContainer = ({
         "mx-auto",
         "text-[20px]",
         "rounded-[20px]",
-        "p-10",
+        "p-10 py-9",
         // "overflow-hidden",
         "fixed top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%]",
         isAboutPage &&
           "!bg-amber-300 !text-black",
-        isPostsPage && "!bg-green-50 !text-black",
-        isWorksPage && "!bg-sky-50 !text-black",
+        isPostsPage &&
+          "!bg-green-300 !text-black",
+        isWorksPage && "!bg-sky-300 !text-black",
         isCareerPage &&
-          "!bg-fuchsia-100 !text-black"
+          "!bg-fuchsia-300 !text-black",
+        "box-border !border-r-[4px] !border-b-[8px]"
       )}
     >
       <Breadcrumb />
@@ -53,11 +54,14 @@ const Breadcrumb = () => {
         "absolute top-0 left-0",
         "bg-pink-100",
         "translate-y-[calc(-100%-20px)]",
-        "p-4 px-7",
-        "rounded-[20px]"
+        "py-[12px] px-[20px]",
+        "rounded-[30px]",
+        "box-border",
+        "font-semibold",
+        "prevent-select"
       )}
     >
-      {pathname}
+      {PATHNAME_MAPPER[pathname]}
     </div>
   );
 };

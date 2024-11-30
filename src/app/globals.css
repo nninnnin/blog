@@ -17,12 +17,21 @@ body {
   height: 100dvh;
 }
 
-a {
-  text-decoration: underline;
+li {
+  list-style: none;
 }
 
 @media print {
   html {
     font-size: 10px;
   }
+}
+
+.box-border {
+  border: 2px solid #2d2d2d;
+}
+
+.prevent-select {
+  user-select: none;
+  -webkit-user-select: none;
 }

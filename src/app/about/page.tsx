@@ -8,7 +8,7 @@ const AboutPage = () => {
       <img
         className={clsx(
           "mb-[1em] mx-auto",
-          "h-[30vh] w-full object-cover"
+          "h-[300px] w-full object-cover"
         )}
         src="/main.jpeg"
       />
