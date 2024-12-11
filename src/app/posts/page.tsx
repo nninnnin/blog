@@ -4,14 +4,20 @@ import PageContainer from "@/components/common/PageContainer";
 import ListView from "@/components/common/ListView";
 
 const PostsPage = () => {
-  const titles = [
-    "씨피카 듣기",
-    "focal length?",
-    "자유",
+  const posts = [
+    {
+      title: "How DNS Server Works",
+      tag: "네트워크",
+    },
   ];
 
-  const items = titles.map((title) => (
-    <PostLink href="/">{title}</PostLink>
+  const items = posts.map((post) => (
+    <PostLink href="/">
+      <span>{post.title}</span>
+      <div className="p-2 py-1 bg-white rounded-lg border-[2px] border-solid border-black">
+        {post.tag}
+      </div>
+    </PostLink>
   ));
 
   return (
@@ -30,7 +36,12 @@ const PostLink = ({
 }) => {
   return (
     <li>
-      <a href={href}>{children}</a>
+      <a
+        className="flex justify-between items-center"
+        href={href}
+      >
+        {children}
+      </a>
     </li>
   );
 };

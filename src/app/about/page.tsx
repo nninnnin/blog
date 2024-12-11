@@ -8,12 +8,13 @@ const AboutPage = () => {
       <img
         className={clsx(
           "mb-[1em] mx-auto",
-          "h-[300px] w-full object-cover"
+          "h-[300px] w-full object-cover",
+          "border-solid border-[2px] border-[blue]",
+          "sepia-[70]"
         )}
         src="/main.jpeg"
       />
-      이것은 아마도 내가 일본의 호텔에서 커피를
-      마시던 흔적이다.
+      2024년 도쿄의 호텔에서..
     </PageContainer>
   );
 };
